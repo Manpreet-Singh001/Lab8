@@ -49,12 +49,32 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.size();
     }
 
+    /**
+     * add city {@link City} to cities {@link CustomList#cities}
+     * @param city {@link City} to add
+     */
     public void addCity(City city){
         this.cities.add(city);
     }
 
+    /**
+     *
+     * @param city
+     * @return true if cities {@link CustomList#cities} has city {@link City}
+     *         false if cities {@link CustomList#cities} does not have city {@link City}
+     */
     public boolean hasCity(City city){
         return cities.contains(city);
+    }
+
+    /**
+     * check if city{@link City} is in cities {@link CustomList#cities}
+     * if city exists in cities, delete it.
+     * @throws IllegalArgumentException if city is not contained in the cities
+     * @param city {@link City}
+     */
+    public void deleteCity(City city){
+
     }
 
 }

@@ -65,4 +65,20 @@ public class CustomListTest {
 
     }
 
+    /**
+     * add mockCity to the list
+     * check if list.has(mockCity) returns true
+     * delete mockCity from the list
+     * check if list.has(mockCity) returns false
+     */
+    @Test
+    public void deleteCityTest(){
+        list = MockCityList();
+        city = MockCity();
+        list.add(city);
+        assertTrue(list.hasCity(city));
+        list.deleteCity(city);
+        assertFalse(list.hasCity(city));
+    }
+
 }
