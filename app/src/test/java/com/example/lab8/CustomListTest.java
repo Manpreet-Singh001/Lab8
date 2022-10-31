@@ -99,7 +99,7 @@ public class CustomListTest {
         assertEquals(1, list.countCities());
         list.addCity(new City("Calgary", "AB"));
         assertEquals(2, list.countCities());
-        list.remove(city);
+        list.deleteCity(city);
         assertEquals(1, list.countCities());
     }
 
