@@ -86,4 +86,21 @@ public class CustomListTest {
         });
     }
 
+    /**
+     * check to see if CustomList.countCities() returns
+     * correct number of cities
+     */
+    @Test
+    public void countCitiesTest(){
+        list = MockCityList();
+        assertEquals(0, list.countCities());
+        city = MockCity();
+        list.addCity(city);
+        assertEquals(1, list.countCities());
+        list.addCity(new City("Calgary", "AB"));
+        assertEquals(2, list.countCities());
+        list.remove(city);
+        assertEquals(1, list.countCities());
+    }
+
 }

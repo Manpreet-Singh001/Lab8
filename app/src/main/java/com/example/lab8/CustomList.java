@@ -80,4 +80,12 @@ public class CustomList extends ArrayAdapter<City> {
         cities.remove(city);
     }
 
+    /**
+     *
+     * @return count of city {@link City} in cities {@link CustomList#cities}
+     */
+    public int countCities(){
+        return 1;
+    }
+
 }
