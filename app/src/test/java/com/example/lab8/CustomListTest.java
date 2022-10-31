@@ -31,6 +31,8 @@ public class CustomListTest {
     @Test
     public void addCityTest(){
         list = MockCityList();
-        list.add(new City("Edmonton", "AB"));
+        int intialSize = list.getCount();
+        list.addCity(new City("Edmonton", "AB"));
+        assertEquals(list.getCount(), intialSize + 1);
     }
 }
