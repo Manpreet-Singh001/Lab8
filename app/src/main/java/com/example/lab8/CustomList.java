@@ -74,7 +74,10 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city {@link City}
      */
     public void deleteCity(City city){
-
+        if (!cities.contains(city)){
+            throw new IllegalArgumentException("Attempted to delete city that doesn't exist");
+        }
+        cities.remove(city);
     }
 
 }
